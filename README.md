@@ -1,1 +1,1 @@
-# Best-Practices.Templates
+# Best.Practices.Templates
