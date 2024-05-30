@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<RootNamespace>$safeprojectname$</RootNamespace>
+    <AssemblyName>$safeprojectname$</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\$ext_projectname$.Core\$ext_projectname$.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Dtos\Builders\" />
+    <Folder Include="Application\UseCases\" />
+    <Folder Include="Domain\Cqrs\CommandProviders\" />
+    <Folder Include="Domain\Models\" />
+    <Folder Include="Domain\Repositories\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+</Project>
