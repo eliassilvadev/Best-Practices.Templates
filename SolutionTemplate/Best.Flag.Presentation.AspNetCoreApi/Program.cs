@@ -1,3 +1,9 @@
+using $ext_safeprojectname$.CommandProvider.Dapper.Configurations;
+using $ext_safeprojectname$.CommandProvider.Dapper.Migrations;
+using $ext_safeprojectname$.Core.Configurations;
+using $ext_safeprojectname$.Presentation.AspNetCoreApi.Configurations;
+using Best.Practices.Core.Presentation.AspNetCoreApi.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var section = builder.Configuration.GetSection("AppSettings");

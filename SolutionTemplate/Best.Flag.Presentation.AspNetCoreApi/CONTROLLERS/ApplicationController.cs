@@ -1,4 +1,9 @@
-﻿namespace $safeprojectname$.Controllers
+﻿using $ext_projectname$.Core.Application.Dtos;
+using $ext_projectname$.Core.Application.UseCases;
+using Best.Practices.Core.Presentation.AspNetCoreApi.Controllers;
+using Microsoft.AspNetCore.Mvc;
+
+namespace $safeprojectname$.Controllers
 {
     [Route("api/applications")]
     [ApiController]
