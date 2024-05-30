@@ -11,15 +11,14 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+	<CreateInPlace>true</CreateInPlace>
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="Best.Flag.CommandProvider.Dapper.csproj" File="Best.Flag.CommandProvider.Dapper.csproj" ReplaceParameters="true">
-      <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />
       <Folder Name="Configurations" TargetFolderName="Configurations">
         <ProjectItem ReplaceParameters="true" TargetFileName="ServiceCollectionExtentions.cs">ServiceCollectionExtentions.cs</ProjectItem>
       </Folder>
-      <Folder Name="EntityCommands" TargetFolderName="EntityCommands" />
       <Folder Name="Handlers" TargetFolderName="Handlers">
         <ProjectItem ReplaceParameters="true" TargetFileName="MySqlGuidTypeHandler.cs">MySqlGuidTypeHandler.cs</ProjectItem>
       </Folder>
