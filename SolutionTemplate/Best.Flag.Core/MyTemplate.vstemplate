@@ -1,13 +1,13 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Best.Flag.Core</Name>
-    <Description>&lt;No description available&gt;</Description>
+    <Name>Best.Practices.Core project</Name>
+    <Description>Project template with domain and application layers and abstractions of the other layers</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Best.Flag.Core</DefaultName>
+    <DefaultName>ModuleName.Core</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>    
@@ -20,6 +20,9 @@
         <Folder Name="Dtos" TargetFolderName="Dtos">
           <Folder Name="Validators" TargetFolderName="Validators" />
         </Folder>
+		<Folder Name="Cqrs" TargetFolderName="Cqrs">        
+          <Folder Name="QueryProviders" TargetFolderName="QueryProviders" />
+        </Folder>
         <Folder Name="UseCases" TargetFolderName="UseCases" />
       </Folder>
       <Folder Name="Common" TargetFolderName="Common">
@@ -30,11 +33,10 @@
       </Folder>
       <Folder Name="Domain" TargetFolderName="Domain">
         <Folder Name="Cqrs" TargetFolderName="Cqrs">
-          <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />
-          <Folder Name="QueryProvider" TargetFolderName="QueryProvider" />
+          <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />          
         </Folder>
         <Folder Name="Enumerators" TargetFolderName="Enumerators" />
-        <Folder Name="Models" TargetFolderName="Models">
+        <Folder Name="Entities" TargetFolderName="Entities">
           <Folder Name="Interfaces" TargetFolderName="Interfaces" />
         </Folder>
         <Folder Name="Repositories" TargetFolderName="Repositories">

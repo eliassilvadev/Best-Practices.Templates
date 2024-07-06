@@ -1,16 +1,17 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Best.Flag.Core.Tests</Name>
-    <Description>&lt;No description available&gt;</Description>
+	<Name>Best.Practices.Core.Tests project</Name>
+    <Description>Project template with test for the domain and application layers and abstractions for the other layers</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Best.Flag.Core.Tests</DefaultName>
+    <DefaultName>ModuleName.Core.Tests</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+	<CreateInPlace>true</CreateInPlace>
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
@@ -18,17 +19,23 @@
       <Folder Name="Application" TargetFolderName="Application">
         <Folder Name="Dtos" TargetFolderName="Dtos">
           <Folder Name="Builders" TargetFolderName="Builders" />
+		  <Folder Name="Validators" TargetFolderName="Validators" />
         </Folder>
         <Folder Name="UseCases" TargetFolderName="UseCases" />
+		<Folder Name="Cqrs" TargetFolderName="Cqrs">
+          <Folder Name="QueryProvider" TargetFolderName="QueryProvider" />
+        </Folder>
       </Folder>
       <Folder Name="Domain" TargetFolderName="Domain">
         <Folder Name="Cqrs" TargetFolderName="Cqrs">
           <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />
         </Folder>
-        <Folder Name="Models" TargetFolderName="Models" />
+        <Folder Name="Entities" TargetFolderName="Entities">
+			<Folder Name="Builders" TargetFolderName="Builders" />
+		</Folder>
         <Folder Name="Repositories" TargetFolderName="Repositories" />
       </Folder>
-      <Folder Name="Exceptions" TargetFolderName="Exceptions" />
+      <Folder Name="Exceptions" TargetFolderName="Exceptions" />	  
     </Project>
   </TemplateContent>
 </VSTemplate>

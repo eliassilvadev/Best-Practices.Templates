@@ -1,5 +1,5 @@
-﻿using $safeprojectname$.Handlers;
-using Best.Practices.Core.CommandProvider.Dapper.UnitOfWork;
+﻿using Best.Practices.Core.Cqrs.Dapper.UnitOfWork;
+using Best.Practices.Core.Cqrs.Dapper.Handlers;
 using Best.Practices.Core.UnitOfWork.Interfaces;
 using Dapper;
 using Microsoft.Extensions.Configuration;
@@ -13,7 +13,7 @@ namespace $safeprojectname$.Configurations
     {
         public static void MapUnitOfWork(this IServiceCollection service)
         {
-            service.AddScoped<IUnitOfWork, DapperUnitOfWork>();
+            service.AddSingleton<IUnitOfWork, DapperUnitOfWork>();
         }
 
         public static void MapConnection(this IServiceCollection service, IConfigurationSection section)
@@ -26,12 +26,16 @@ namespace $safeprojectname$.Configurations
 
             var connection = new MySqlConnection(connectionString);
 
-            service.AddScoped(c => connection);
-            service.AddScoped<IDbConnection, MySqlConnection>(c => connection);
+            service.AddSingleton(c => connection);
+            service.AddSingleton<IDbConnection, MySqlConnection>(c => connection);
             SqlMapper.AddTypeHandler(new MySqlGuidTypeHandler());
         }
 
         public static void MapCommandProviders(this IServiceCollection service)
+        {
+        }
+
+        public static void MapQueryProviders(this IServiceCollection service)
         {
         }
 

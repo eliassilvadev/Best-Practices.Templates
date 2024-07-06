@@ -9,17 +9,17 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Best.Flag.Presentation.AspNetCoreApi/Best.Flag.Presentation.AspNetCoreApi.csproj", "Best.Flag.Presentation.AspNetCoreApi/"]
-RUN dotnet restore "./Best.Flag.Presentation.AspNetCoreApi/Best.Flag.Presentation.AspNetCoreApi.csproj"
+COPY ["$ext_projectname$.Presentation.AspNetCoreApi/$ext_projectname$.Presentation.AspNetCoreApi.csproj", "$ext_projectname$.Presentation.AspNetCoreApi/"]
+RUN dotnet restore "./$ext_projectname$.Presentation.AspNetCoreApi/$ext_projectname$.Presentation.AspNetCoreApi.csproj"
 COPY . .
-WORKDIR "/src/Best.Flag.Presentation.AspNetCoreApi"
-RUN dotnet build "./Best.Flag.Presentation.AspNetCoreApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/$ext_projectname$.Presentation.AspNetCoreApi"
+RUN dotnet build "./$ext_projectname$.Presentation.AspNetCoreApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Best.Flag.Presentation.AspNetCoreApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./$ext_projectname$.Presentation.AspNetCoreApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Best.Flag.Presentation.AspNetCoreApi.dll"]
+ENTRYPOINT ["dotnet", "$ext_projectname$.Presentation.AspNetCoreApi.dll"]

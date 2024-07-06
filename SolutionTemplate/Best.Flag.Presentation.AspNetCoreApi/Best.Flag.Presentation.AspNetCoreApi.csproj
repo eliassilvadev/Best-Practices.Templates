@@ -8,7 +8,7 @@
   </PropertyGroup>	
 	
   <ItemGroup>
-   <PackageReference Include="Best.Practices.Core.Presentation.AspNetCoreApi" Version="0.0.23" />
+   <PackageReference Include="Best.Practices.Core.Presentation.AspNetCoreApi" Version="0.0.32" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
@@ -16,7 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\$ext_projectname$.CommandProvider.Dapper\$ext_projectname$.CommandProvider.Dapper.csproj" />
+    <ProjectReference Include="..\$ext_projectname$.Cqrs.Dapper\$ext_projectname$.Cqrs.Dapper.csproj" />
 	<ProjectReference Include="..\$ext_projectname$.Core\$ext_projectname$.Core.csproj" />
+  </ItemGroup>
+  
+   <ItemGroup>
+    <Folder Include="Controllers\" />   
   </ItemGroup>
 </Project>

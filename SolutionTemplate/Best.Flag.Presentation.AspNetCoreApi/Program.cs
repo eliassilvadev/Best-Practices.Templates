@@ -1,5 +1,5 @@
-using $ext_safeprojectname$.CommandProvider.Dapper.Configurations;
-using $ext_safeprojectname$.CommandProvider.Dapper.Migrations;
+using $ext_safeprojectname$.Cqrs.Dapper.Configurations;
+using $ext_safeprojectname$.Cqrs.Dapper.Migrations;
 using $ext_safeprojectname$.Core.Configurations;
 using $ext_safeprojectname$.Presentation.AspNetCoreApi.Configurations;
 using Best.Practices.Core.Presentation.AspNetCoreApi.Configurations;
@@ -12,6 +12,7 @@ builder.Services.MapRepositories();
 builder.Services.MapValidations();
 builder.Services.MapUseCases();
 builder.Services.MapCommandProviders();
+builder.Services.MapQueryProviders();
 builder.Services.MapHttpContextAccessor();
 builder.Services.MapUnitOfWork();
 builder.Services.MapConnection(section);

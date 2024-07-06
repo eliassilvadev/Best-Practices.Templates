@@ -1,13 +1,13 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Best.Flag.CommandProvider.Dapper</Name>
-    <Description>&lt;No description available&gt;</Description>
+	<Name>Best.Flag.Cqrs.Dapper project</Name>
+    <Description>Project template with query stack/command stack implementation using dapper</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Best.Flag.CommandProvider.Dapper</DefaultName>
+    <DefaultName>ModuleName.Cqrs.Dapper</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
@@ -15,22 +15,21 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Best.Flag.CommandProvider.Dapper.csproj" File="Best.Flag.CommandProvider.Dapper.csproj" ReplaceParameters="true">
+    <Project TargetFileName="Best.Flag.Cqrs.Dapper.csproj" File="Best.Flag.Cqrs.Dapper.csproj" ReplaceParameters="true">
       <Folder Name="Configurations" TargetFolderName="Configurations">
         <ProjectItem ReplaceParameters="true" TargetFileName="ServiceCollectionExtentions.cs">ServiceCollectionExtentions.cs</ProjectItem>
-      </Folder>
-      <Folder Name="Handlers" TargetFolderName="Handlers">
-        <ProjectItem ReplaceParameters="true" TargetFileName="MySqlGuidTypeHandler.cs">MySqlGuidTypeHandler.cs</ProjectItem>
-      </Folder>
+      </Folder>      
       <Folder Name="Migrations" TargetFolderName="Migrations">
         <Folder Name="SctructuralScripts" TargetFolderName="SctructuralScripts">
           <ProjectItem ReplaceParameters="true" TargetFileName="20240430081200CreateTableScript.sql">20240430081200CreateTableScript.sql</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="Migrations.cs">Migrations.cs</ProjectItem>
       </Folder>
-      <Folder Name="TableDefinitions" TargetFolderName="TableDefinitions">
-        <ProjectItem ReplaceParameters="true" TargetFileName="DapperEntityNameTableDefinition.cs">DapperEntityNameTableDefinition.cs</ProjectItem>
-      </Folder>
+      <Folder Name="TableDefinitions" TargetFolderName="TableDefinitions"/>
+	  <Folder Name="CommandProviders" TargetFolderName="CommandProviders" />
+	  <Folder Name="QueryProviders" TargetFolderName="QueryProviders" />
+      <Folder Name="EntityCommands" TargetFolderName="EntityCommands" />
+      <Folder Name="Handlers" TargetFolderName="Handlers" />
     </Project>
   </TemplateContent>
 </VSTemplate>
