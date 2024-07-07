@@ -15,7 +15,7 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Best.Flag.Core.Tests.csproj" File="Best.Flag.Core.Tests.csproj" ReplaceParameters="true">
+    <Project TargetFileName="BPTemplate.Core.Tests.csproj" File="BPTemplate.Core.Tests.csproj" ReplaceParameters="true">
       <Folder Name="Application" TargetFolderName="Application">
         <Folder Name="Dtos" TargetFolderName="Dtos">
           <Folder Name="Builders" TargetFolderName="Builders" />

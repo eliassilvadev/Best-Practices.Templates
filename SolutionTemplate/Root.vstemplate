@@ -16,16 +16,16 @@
   <TemplateContent>
 	<ProjectCollection>
             <ProjectTemplateLink ProjectName="$projectname$.Core" CopyParameters="true">
-                Best.Flag.Core\MyTemplate.vstemplate
+                BPTemplate.Core\MyTemplate.vstemplate
             </ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$projectname$.Core.Tests" CopyParameters="true">
-                Best.Flag.Core.Tests\MyTemplate.vstemplate
+                BPTemplate.Core.Tests\MyTemplate.vstemplate
             </ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$projectname$.Cqrs.Dapper" CopyParameters="true">
-                Best.Flag.Cqrs.Dapper\MyTemplate.vstemplate
+                BPTemplate.Cqrs.Dapper\MyTemplate.vstemplate
             </ProjectTemplateLink>
 			<ProjectTemplateLink ProjectName="$projectname$.Presentation.AspNetCoreApi" CopyParameters="true">
-                Best.Flag.Presentation.AspNetCoreApi\MyTemplate.vstemplate
+                BPTemplate.Presentation.AspNetCoreApi\MyTemplate.vstemplate
             </ProjectTemplateLink>
         </ProjectCollection>
   </TemplateContent>

@@ -1,6 +1,6 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-	<Name>Best.Flag.Cqrs.Dapper project</Name>
+	<Name>BPTemplate.Cqrs.Dapper project</Name>
     <Description>Project template with query stack/command stack implementation using dapper</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
@@ -15,7 +15,7 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Best.Flag.Cqrs.Dapper.csproj" File="Best.Flag.Cqrs.Dapper.csproj" ReplaceParameters="true">
+    <Project TargetFileName="BPTemplate.Cqrs.Dapper.csproj" File="BPTemplate.Cqrs.Dapper.csproj" ReplaceParameters="true">
       <Folder Name="Configurations" TargetFolderName="Configurations">
         <ProjectItem ReplaceParameters="true" TargetFileName="ServiceCollectionExtentions.cs">ServiceCollectionExtentions.cs</ProjectItem>
       </Folder>      

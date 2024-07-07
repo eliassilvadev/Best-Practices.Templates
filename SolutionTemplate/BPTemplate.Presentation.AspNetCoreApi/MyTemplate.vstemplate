@@ -15,7 +15,7 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Best.Flag.Presentation.AspNetCoreApi.csproj" File="Best.Flag.Presentation.AspNetCoreApi.csproj" ReplaceParameters="true">
+    <Project TargetFileName="BPTemplate.Presentation.AspNetCoreApi.csproj" File="BPTemplate.Presentation.AspNetCoreApi.csproj" ReplaceParameters="true">
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
       </Folder>
